@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Tracker — GTA VI Trophy Guide</title>
+<meta name="description" content="The best offline guide and tracker for the 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap to the Platinum, missable flags, and a cited guide for every trophy.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="palms" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>LEONIDA<br>TRACKER</h1>
+    <p class="tagline">Every trophy. Every guide. One road to the Platinum.</p>
+  </div>
+  <div class="progress" id="progress" aria-live="polite">
+    <div class="progress-numbers"><strong id="earned-count">0 / 55</strong><span id="progress-pct">0% to the Platinum</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    <div class="progress-grades" id="progress-grades"></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button id="tab-checklist" class="tab active" type="button">Checklist</button>
+  <button id="tab-roadmap" class="tab" type="button">Platinum roadmap</button>
+  <span class="tab-note">55 trophies &middot; 1 Platinum &middot; 2 Gold &middot; 6 Silver &middot; 46 Bronze &middot; 28 hidden &middot; 1 missable &middot; no online trophies</span>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="toolbar">
+      <label class="search">Search
+        <input id="search" type="search" placeholder="Trophy name or description…" autocomplete="off">
+      </label>
+      <div class="filters" id="kind-filters" role="group" aria-label="Filter by kind">
+        <button class="chip active" type="button" data-kind="all">All</button>
+        <button class="chip" type="button" data-kind="story">Story</button>
+        <button class="chip" type="button" data-kind="missable">Missable</button>
+        <button class="chip" type="button" data-kind="collectibles">Collectibles</button>
+        <button class="chip" type="button" data-kind="activities">Activities</button>
+        <button class="chip" type="button" data-kind="robbery">Robbery</button>
+        <button class="chip" type="button" data-kind="side">Side stories</button>
+        <button class="chip" type="button" data-kind="world">World</button>
+      </div>
+      <div class="toolbar-row">
+        <label class="select">Grade
+          <select id="grade-filter">
+            <option value="all">All grades</option>
+            <option value="platinum">Platinum</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+          </select>
+        </label>
+        <label class="toggle"><input id="hide-earned" type="checkbox"> Hide earned</label>
+        <label class="toggle spoiler"><input id="spoiler-toggle" type="checkbox"> Spoiler-safe: hide hidden story trophies until earned</label>
+      </div>
+      <div class="toolbar-row">
+        <button id="export-btn" class="btn" type="button">Export progress</button>
+        <label class="btn file-btn">Import progress<input id="import-file" type="file" accept="application/json,.json" hidden></label>
+        <button id="reset-btn" class="btn danger" type="button">Reset checklist</button>
+        <span class="saved-note" id="saved-note">Progress saves in this browser.</span>
+      </div>
+    </div>
+    <p class="count-line" id="count-line"></p>
+    <div class="trophy-grid" id="trophy-grid"></div>
+    <p class="empty" id="empty-state" hidden>No trophies match these filters. Clear the search or pick another kind.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <p class="roadmap-intro">Seven stages, in order, from the first mission to the Platinum. Built from the official trophy descriptions. Around 200 hours all in — long, not hard.</p>
+    <div class="roadmap" id="roadmap"></div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades are the official PlayStation list as tracked by Exophase and PSNProfiles. How-to details cite Output Lag, KeenGamer and GGRecon — each trophy's guide names its sources. Guides are written in our own words; nothing is copied from another guide.</p>
+  <p>Offline by design: this guide loads only its own files and makes no network request. No Rockstar logo or official artwork anywhere in it. Data: <code>app/data/trophies.json</code> · <code>app/data/roadmap.json</code>.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
